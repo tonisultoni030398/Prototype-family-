@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Keluarga</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<section id="loginPanel" class="login-panel">
+  <h2>Ruang Keluarga</h2>
+  <p>Login untuk membuka data silsilah keluarga.</p>
+
+  <form id="loginForm">
+    <label for="email">Email</label>
+    <input id="email" type="email"
+      placeholder="email@contoh.com" required>
+
+    <label for="password">Password</label>
+    <input id="password" type="password"
+      minlength="6" placeholder="Minimal 6 karakter"
+      required>
+
+    <button type="submit" id="loginBtn">Login</button>
+    <button type="button" id="daftarBtn">
+      Daftar akun baru
+    </button>
+  </form>
+
+  <p id="authMessage" role="status"></p>
+</section>
+  <header class="header">
+    <div>
+      <h2>🌳 Ruang Keluarga</h2>
+      <p>Jejak keluarga dari generasi ke generasi</p>
+    </div>
+    <button id="tambahBtn">+ Anggota</button>
+  </header>
+
+  <main>
+    <section class="judul">
+      <p>SILSILAH KELUARGA</p>
+      <h1>Pohon Keluarga</h1>
+      <span>Kenali hubungan keluarga kita.</span>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <strong>Diagram utama</strong>
+        <span id="jumlah">3 anggota</span>
+      </div>
+
+      <div id="diagram" class="diagram">
+        <!-- Kartu keluarga dibuat oleh JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <dialog id="formDialog">
+    <form id="formAnggota">
+      <h2>Tambah Anggota</h2>
+
+      <label for="nama">Nama lengkap</label>
+      <input id="nama" type="text"
+        placeholder="Masukkan nama" required>
+
+      <label for="orangTua">Nama orang tua</label>
+      <select id="orangTua">
+        <option value="">Generasi paling atas</option>
+      </select>
+
+      <div class="aksi">
+        <button type="button" id="batalBtn">Batal</button>
+        <button type="submit">Simpan</button>
+      </div>
+    </form>
+  </dialog>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

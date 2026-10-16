@@ -1,0 +1,336 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #f58a1f;
+  --orange-muda: #fff0df;
+  --teks: #26313b;
+  --abu: #7e8992;
+  --garis: #efc18e;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--teks);
+  background: #f6f7f9;
+}
+
+.login-panel {
+  max-width: 420px;
+  margin: 35px auto;
+  padding: 24px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px #00000008;
+}
+
+.login-panel h2 {
+  margin-top: 0;
+  color: #f58a1f;
+}
+
+.login-panel p {
+  color: #7e8992;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.login-panel label {
+  display: block;
+  margin: 15px 0 7px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.login-panel input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+}
+
+.login-panel button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+#daftarBtn {
+  color: #f58a1f;
+  background: #fff0df;
+}
+
+#authMessage {
+  overflow-wrap: anywhere;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.header p {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: var(--abu);
+}
+
+button {
+  border: none;
+  border-radius: 9px;
+  padding: 11px 14px;
+  background: var(--orange);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.judul {
+  padding: 24px 16px 20px;
+}
+
+.judul p {
+  margin: 0 0 8px;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.judul h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.judul span {
+  font-size: 13px;
+  color: var(--abu);
+}
+
+.panel {
+  margin: 0 12px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e9edf0;
+  border-radius: 14px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.panel-header strong {
+  font-size: 14px;
+}
+
+.panel-header span {
+  color: var(--orange);
+  font-size: 12px;
+}
+
+.diagram {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  min-height: 400px;
+  padding: 28px 20px;
+  overflow: auto;
+}
+
+.keluarga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.kartu {
+  width: 125px;
+  min-height: 135px;
+  padding: 13px 8px;
+  background: white;
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px #00000008;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffe0b5, #f3a348);
+  color: #774315;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nama {
+  font-size: 12px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+.keterangan {
+  margin-top: 6px;
+  color: var(--abu);
+  font-size: 10px;
+}
+
+.penghubung {
+  width: 2px;
+  height: 28px;
+  background: var(--garis);
+}
+
+.anak {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 0;
+}
+
+.anak .keluarga {
+  position: relative;
+}
+
+#formDialog {
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 22px;
+  border: none;
+  border-radius: 16px;
+}
+
+#formDialog::backdrop {
+  background: #17202b99;
+}
+
+#formDialog h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 15px 0 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+}
+
+.aksi {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+#batalBtn {
+  background: #edf0f2;
+  color: var(--teks);
+}
+
+@media (min-width: 700px) {
+  main {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .header {
+    padding: 20px 35px;
+  }
+
+  .diagram {
+    min-height: 500px;
+  }
+}
+
+.hapus {
+  margin-top: 10px;
+  padding: 6px 10px;
+  background: #fff0f0;
+  color: #d93636;
+  border: 1px solid #ffd1d1;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.hapus:hover {
+  background: #d93636;
+  color: white;
+}
+
+
+/* Sebelum login, sembunyikan halaman keluarga */
+body:not(.sudah-login) > .header,
+body:not(.sudah-login) > main,
+body:not(.sudah-login) > footer {
+  display: none;
+}
+
+.login-panel {
+  width: calc(100% - 28px);
+  max-width: 400px;
+  margin: 35px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px #0000000a;
+}
+
+
+.login-panel[hidden] {
+  display: none !important;
+}
+
+body:not(.sudah-login) > .header,
+body:not(.sudah-login) > main,
+body:not(.sudah-login) > footer {
+  display: none !important;
+}
+
+body.sudah-login #loginPanel {
+  display: none !important;
+}
+
+#diagram > .keluarga {
+  flex-shrink: 0;
+}
+
+.kartu .hapus {
+  margin-top: 10px;
+  padding: 6px 9px;
+  background: #fff0f0;
+  color: #d93636;
+  font-size: 10px;
+}
